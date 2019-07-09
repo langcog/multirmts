@@ -1,10 +1,9 @@
-subject,same_1,same_2,same_3,diff_1,diff_2,diff_3,Hesitation (trial numbers),Left/Right Bias,guessing,FirstBlock,RulePreseveration,SameAvg,DiffAvg,explanation?,general notes
+subject,same_1,same_2,same_3,diff_1,diff_2,diff_3,Hesitation (trial numbers),Left/Right Bias,Guessing,FirstBlock,RulePreseveration,SameAvg,DiffAvg,Explanation?,GeneralNotes
 multi-01,0,0,1,0,1,1,,0,,same,0,0.33,0.67,,
-2,1,1,1,0,NA,0,,0,,same,1,1.00,0.00,,"Confident on Toy1, misiing  diff2 (accidental click), always goes for same"
+2,1,1,1,0,NA,0,,0,,same,1,1,0,,"Confident on Toy1, misiing  diff2 (accidental click), always goes for same"
 3,0,1,0,1,1,0,,1,,different,0,0.33,0.67,,struggles with pointing
-4,1,1,0,1,1,1,,0,,different,0,0.67,1.00,fgured the different c (toy1),"confident on Toy1, misiing a trial, always goes for same"
+4,1,1,0,1,1,1,,0,,different,0,0.67,1,fgured the different c (toy1),"confident on Toy1, misiing a trial, always goes for same"
 5,0,1,1,0,0,1,,"L(toy 1), R(toy 2)?",,different,0,0.67,0.33,,Says he doesn't know how it works
 7,1,NA,1,0,1,0,,0,,same,0,0.67,0.33,,"Missing same2 (accidental click) pressed too hard, but got it"
-6,1,0,0,1,1,1,,0,,same,0,0.33,1.00,,comments on box colors
+6,1,0,0,1,1,1,,0,,same,0,0.33,1,,comments on box colors
 8,1,0,0,1,0,  ,,0,,same,0,0.33,0.33,,"circle, square"
-,,,,,,,,,,,,,,,
