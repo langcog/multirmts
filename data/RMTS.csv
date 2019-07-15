@@ -1,20 +1,20 @@
 subject,age,same_1,same_2,same_3,diff_1,diff_2,diff_3,Hesitation (trial numbers),Left/Right Bias,FirstBlock,RulePreseveration,SameAvg,DiffAvg ,1st_Block_1,2nd_Block_1,Average,Explanation?,GeneralNotes
-S1E1-Jul,4.39,0,0,1,0,1,1,,0,same,0,0.33,0.666666667,0.631578947,0.368421053,0.54,,
-S2E1-Jul,4.36,1,1,1,0,NA,0,,0,same,1,1.00,0,,,,," missing  diff_2 (accidental click),"
-S3E1-Jul,4.01,0,1,0,1,1,0,,1,different,0,0.33,0.666666667,,,,,"struggles with pushing (the script still used ""point,"" we changed that to ""push"" later"
-S4E1-Jul,4.08,1,1,0,1,1,1,,0,different,0,0.67,1,,,,,
-S5E1-Jul,4.01,0,1,1,0,0,1,,"L(toy 1), R(toy 2)?",different,0,0.67,0.333333333,,,,,Says he doesn't know how it works
-E1S6,4.48,1,0,0,1,1,1,,0,same,0,0.33,1,,,,,Makes comments about colors of the box and differences between the two boxes
-E1S7,4.48,1,NA,1,0,1,0,,0,same,0,1.00,0.333333333,,,,,"Missing same_2 (accidental click), but it seems that he definitely gets the same condition"
-E1S8,4.71,1,0,0,1,0,  ,,0,same,0,0.33,0.5,,,,,"Mentions the shapes (a circle, a square)"
-Multi-09,4.93,0,0,0,0,1,0,,0,same,0,0.00,0.333333333,,,,mentions the shape,
-Multi10,,0,1,1,1,1,1,,0,different,0,0.67,1,,,,,"sSays ""I don't know"" before the second test cycle*** recording is low resolution, must recheck ""same_1"""
-Multi-11,,0,0,0,1,1,1,"diff_1, same_1",0,different,1,0.00,1,,,,,"wants to push the buttons instead of me; needs extra encouragement on diff_1; goes for one option before he hears the prompt on ""same_1"" then changes his mind once he hears the prompt"
-Multi-12,4.65,0,0,0,1,1,1,,0,different,1,0.00,1,,,,"for ""same"" block says ""it starts with music""","wants to push, asks ""why"" after the line ""these ones did not make it play"" preceding the ""same-block"" test "
-Multi13-a,4.3,1,0,1,1,0,0,same_2,diff(l),same,0,0.67,0.333333333,,,,,"*the first time ""push"" warm-up didn't work (version multi-13), I had to reset the tablet and start again (version multi-13a), but he only saw the actual game once insists to push the buttons, I let him do it"
-Multi-14,5.48,0,0,0,1,1,1,,0,same,0,0.00,1,,,,"offers several different explanations as the game progresses: during the first block: "" I know why no music. The second one have music;"" later, during the second block: ""second ones don't have music"" and THEN, finally, near the end of the second block says: ""2 different play music, 2 same don't play music,"" which is true for that condition",wants to push
-Multi-15,4.84,0,1,0,0,0,1,,1,different,0,0.33,0.333333333,,,,,pushed the button and started the first trial before the instructions
-Multi-16,4.07,0,1,1,1,0,0,,0,same,0,0.67,0.333333333,,,,,"Thinks there is a connection between the star stimulus, and the stars that represent the box's mechanism"
-Multi-17,4.68,1,1,0,0,1,1,same_1,0,same,0,0.67,0.666666667,,,,,
-Multi-18,4.73,0,0,1,0,1,1,,0,different,0,0.33,0.666666667,,,,,"says the toy is broken when it doesn't play music; says the shapes didn't make it play ""because they're moons"""
-Multi-20,4.03,1,1,1,1,1,1,,0,same,0,1.00,1,,,,,
+S1E1-Jul,4.39,0,0,1,0,1,1,,0,same,0,0.33,0.67,0.63,0.37,0.54,,
+S2E1-Jul,4.36,1,1,1,0,NA,0,,0,same,1,1,0.00,,,,," missing  diff_2 (accidental click),"
+S3E1-Jul,4.01,0,1,0,1,1,0,,1,different,0,0.33,0.67,,,,,"struggles with pushing (the script still used ""point,"" we changed that to ""push"" later"
+S4E1-Jul,4.08,1,1,0,1,1,1,,0,different,0,0.67,1.00,,,,,
+S5E1-Jul,4.01,0,1,1,0,0,1,,"L(toy 1), R(toy 2)?",different,0,0.67,0.33,,,,,Says he doesn't know how it works
+E1S6,4.48,1,0,0,1,1,1,,0,same,0,0.33,1.00,,,,,Makes comments about colors of the box and differences between the two boxes
+E1S7,4.48,1,NA,1,0,1,0,,0,same,0,1,0.33,,,,,"Missing same_2 (accidental click), but it seems that he definitely gets the same condition"
+E1S8,4.71,1,0,0,1,0,  ,,0,same,0,0.33,0.50,,,,,"Mentions the shapes (a circle, a square)"
+Multi-09,4.93,0,0,0,0,1,0,,0,same,0,0,0.33,,,,mentions the shape,
+Multi10,,0,1,1,1,1,1,,0,different,0,0.67,1.00,,,,,"sSays ""I don't know"" before the second test cycle*** recording is low resolution, must recheck ""same_1"""
+Multi-11,,0,0,0,1,1,1,"diff_1, same_1",0,different,1,0,1.00,,,,,"wants to push the buttons instead of me; needs extra encouragement on diff_1; goes for one option before he hears the prompt on ""same_1"" then changes his mind once he hears the prompt"
+Multi-12,4.65,0,0,0,1,1,1,,0,different,1,0,1.00,,,,"for ""same"" block says ""it starts with music""","wants to push, asks ""why"" after the line ""these ones did not make it play"" preceding the ""same-block"" test "
+Multi13-a,4.3,1,0,1,1,0,0,same_2,diff(l),same,0,0.67,0.33,,,,,"*the first time ""push"" warm-up didn't work (version multi-13), I had to reset the tablet and start again (version multi-13a), but he only saw the actual game once insists to push the buttons, I let him do it"
+Multi-14,5.48,0,0,0,1,1,1,,0,same,0,0,1.00,,,,"offers several different explanations as the game progresses: during the first block: "" I know why no music. The second one have music;"" later, during the second block: ""second ones don't have music"" and THEN, finally, near the end of the second block says: ""2 different play music, 2 same don't play music,"" which is true for that condition",wants to push
+Multi-15,4.84,0,1,0,0,0,1,,1,different,0,0.33,0.33,,,,,pushed the button and started the first trial before the instructions
+Multi-16,4.07,0,1,1,1,0,0,,0,same,0,0.67,0.33,,,,,"Thinks there is a connection between the star stimulus, and the stars that represent the box's mechanism"
+Multi-17,4.68,1,1,0,0,1,1,same_1,0,same,0,0.67,0.67,,,,,
+Multi-18,4.73,0,0,1,0,1,1,,0,different,0,0.33,0.67,,,,,"says the toy is broken when it doesn't play music; says the shapes didn't make it play ""because they're moons"""
+Multi-20,4.03,1,1,1,1,1,1,,0,same,0,1,1.00,,,,,
