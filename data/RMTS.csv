@@ -1,9 +1,9 @@
 subject,age,same_1,same_2,same_3,diff_1,diff_2,diff_3,Hesitation (trial numbers),Left/Right Bias,FirstBlock,RulePreseveration,SameAvg,DiffAvg ,1st_Block_1,2nd_Block_1,Average,Explanation?,GeneralNotes
-S1E1-Jul,4.39,0,0,1,0,1,1,,0,same,0,0.333333333,0.666666667,0.583333333,0.375,0.553191489,,
+S1E1-Jul,4.39,0,0,1,0,1,1,,0,same,0,0.333333333,0.666666667,0.633333333,0.44827,0.58045,,
 S2E1-Jul,4.36,1,1,1,0,NA,0,,0,same,1,1,0,,,,," missing  diff_2 (accidental click),"
 S3E1-Jul,4.01,0,1,0,1,1,0,,1,different,0,0.333333333,0.666666667,,,,,"struggles with pushing (the script still used ""point,"" we changed that to ""push"" later"
 S4E1-Jul,4.08,1,1,0,1,1,1,,0,different,0,0.666666667,1,,,,,
-S5E1-Jul,4.01,0,1,1,0,0,1,,"L(toy 1), R(toy 2)?",different,0,0.666666667,0.333333333,,,,,Says he doesn't know how it works
+S5E1-Jul,4.01,0,1,1,0,0,1,,"L(block_1), R(block_2)?",different,0,0.666666667,0.333333333,,,,,Says he doesn't know how it works
 E1S6,4.48,1,0,0,1,1,1,,0,same,0,0.333333333,1,,,,,Makes comments about colors of the box and differences between the two boxes
 E1S7,4.48,1,NA,1,0,1,0,,0,same,0,1,0.333333333,,,,,"Missing same_2 (accidental click), but it seems that he definitely gets the same condition"
 E1S8,4.01,1,0,0,1,0,  ,,0,same,0,0.333333333,0.5,,,,,"Mentions the shapes (a circle, a square)"
@@ -11,7 +11,7 @@ Multi-09,4.93,0,0,0,0,1,0,,0,same,0,0,0.333333333,,,,mentions the shape,
 Multi10,4.93,0,1,1,1,1,1,,0,different,0,0.666666667,1,,,,,"sSays ""I don't know"" before the second test cycle*** recording is low resolution, must recheck ""same_1"""
 Multi-11,,0,0,0,1,1,1,"diff_1, same_1",0,different,1,0,1,,,,,"wants to push the buttons instead of me; needs extra encouragement on diff_1; goes for one option before he hears the prompt on ""same_1"" then changes his mind once he hears the prompt"
 Multi-12,4.65,0,0,0,1,1,1,,0,different,1,0,1,,,,"for ""same"" block says ""it starts with music""","wants to push, asks ""why"" after the line ""these ones did not make it play"" preceding the ""same-block"" test "
-Multi13-a,4.3,1,0,1,1,0,0,same_2,diff(l),same,0,0.666666667,0.333333333,,,,,"*the first time ""push"" warm-up didn't work (version multi-13), I had to reset the tablet and start again (version multi-13a), but he only saw the actual game once insists to push the buttons, I let him do it"
+Multi13-a,4.3,1,0,1,1,0,0,same_2,L (block 2),same,0,0.666666667,0.333333333,,,,,"*the first time ""push"" warm-up didn't work (version multi-13), I had to reset the tablet and start again (version multi-13a), but he only saw the actual game once insists to push the buttons, I let him do it"
 Multi-14,5.48,0,0,0,1,1,1,,0,same,0,0,1,,,,"offers several different explanations as the game progresses: during the first block: "" I know why no music. The second one have music;"" later, during the second block: ""second ones don't have music"" and THEN, finally, near the end of the second block says: ""2 different play music, 2 same don't play music,"" which is true for that condition",wants to push
 Multi-15,4.84,0,1,0,0,0,1,,1,different,0,0.333333333,0.333333333,,,,,pushed the button and started the first trial before the instructions
 Multi-16,4.07,0,1,1,1,0,0,,0,same,0,0.666666667,0.333333333,,,,,"Thinks there is a connection between the star stimulus, and the stars that represent the box's mechanism"
@@ -23,3 +23,9 @@ Multi-21,4.43,0,1,0,0,0,0,,0,different,0,0.333333333,0,,,,,
 Multi-22,4.24,0,0,0,1,0,1,,0,same,0,0,0.666666667,,,,,asks to go back to classroom in the middle of the game
 Multi-23,4.71,1,1,0,0,1,1,diff_3,0,same,0,0.666666667,0.666666667,,,,,"really distracted, plays with her clothes"
 Multi-24,,1,1,1,1,1,1,diff_3,0,different,0,1,1,,,,"""Maybe only when it's different, it plays music""","focuses on the buttons on the tablet, says they point to the shapes what to do"
+Multi-25,,1,1,1,1,1,1,,0,different,0,1,1,,,,,check if she's different condition (bad camera angle)
+Multi-26,4.49,1,1,1,1,0,0,,R (block_2),same,0,1,0.333333333,,,,"""Because they're touching it! (the box)""",wants to push
+Multi-27,4.09,1,0,1,NA,NA,NA,same_1,1,same,0,0.666666667,#DIV/0!,,,,,game interrupted in the middle
+Multi-28,4.59,1,1,1,0,0,0,diff_1,0,different,0,1,0,,,,,"distracted by her toy; does ""same the entire time, but the first rule is different - not perseveration"
+Multi-29,3.94,0,1,1,1,0,0,diff_3,0,different,0,0.666666667,0.333333333,,,,,
+Multi-30,4.25,1,0,1,1,1,1,same_2,0,same,0,0.666666667,1,,,,,

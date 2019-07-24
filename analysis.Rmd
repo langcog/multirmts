@@ -1,8 +1,10 @@
 ---
 title: "multiRMTS analysis"
 author: "Sanja Alex Mike"
-date: "7/8/2019"
-output: html_document
+date: "7/22/2019"
+output:
+  html_document: default
+  pdf_document: default
 ---
 
 Preliminaries for analysis.
@@ -11,6 +13,7 @@ Preliminaries for analysis.
 library(tidyverse)
 library(here)
 library(langcog)
+library(ggthemes)
 ```
 
 Now load data. 
@@ -24,9 +27,9 @@ Reformat to long format.
 ```{r}
 d <- d_raw %>%
   filter(!is.na(subject)) %>%
-  select(-`Hesitation (trial numbers)`, -`Left/Right Bias`, -guessing, 
-         -SameAvg, -DiffAvg, -`general notes`,
-         -RulePreseveration, -`explanation?`) %>%
+  select(-`Hesitation (trial numbers)`, -`Left/Right Bias`,
+         -SameAvg, -DiffAvg, -`GeneralNotes`,
+         -RulePreseveration, -`Explanation?`) %>%
   gather(trial_type, correct, same_1:diff_3) %>%
   separate(trial_type, c("trial_type", "trial_num"))
 ```
