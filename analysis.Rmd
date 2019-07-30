@@ -14,6 +14,7 @@ library(tidyverse)
 library(here)
 library(langcog)
 library(ggthemes)
+
 ```
 
 Now load data. 
@@ -73,6 +74,8 @@ ggplot(ms,
   geom_hline(yintercept = .5, lty = 2) +
   theme_classic() + 
   ggthemes::scale_color_solarized() + 
-  theme(legend.position = "bottom")
+  theme(legend.position = "bottom") 
+
+
 
 ```
