@@ -12,8 +12,9 @@ Preliminaries for analysis.
 ```{r}
 library(tidyverse)
 library(here)
-library(langcog)
+#library(langcog)
 library(ggthemes)
+library(tidyboot)
 
 ```
 
@@ -41,7 +42,8 @@ By trial type.
 ```{r}
 ms <- d %>%
   group_by(trial_type) %>%
-  multi_boot_standard(col = "correct", na.rm = TRUE)
+  #multi_boot_standard(col = "correct", na.rm = TRUE)
+  tidyboot_mean(correct, na.rm=T)
 
 ggplot(ms, 
        aes(x = trial_type, y = mean, col = trial_type)) + 
@@ -61,7 +63,8 @@ By trial type and trial number.
 ```{r}
 ms <- d %>%
   group_by(trial_type, trial_num) %>%
-  multi_boot_standard(col = "correct", na.rm = TRUE)
+  #multi_boot_standard(col = "correct", na.rm = TRUE)
+  tidyboot_mean(correct, na.rm=T)
 
 ggplot(ms, 
        aes(x = trial_num, y = mean, col = trial_type)) + 
@@ -77,5 +80,28 @@ ggplot(ms,
   theme(legend.position = "bottom") 
 
 
+
+```
+
+Trial by block.
+
+```{r}
+ms <- d %>%  
+  group_by(trial_type, FirstBlock, trial_num) %>%  
+  #multi_boot_standard(col = "correct", na.rm = TRUE)
+  tidyboot_mean(correct, na.rm=T)
+
+ggplot(ms,        
+  aes(x = trial_num, y = mean, col = trial_type)) +   
+  geom_pointrange(aes(ymin = ci_lower, ymax = ci_upper), position = position_dodge(width = .1)) +   
+  geom_line(aes(group = trial_type)) +   
+  facet_wrap(~FirstBlock) + 
+  ylim(0,1) +   
+  ylab("Proportion correct") +   
+  xlab("Trial type") +   
+  geom_hline(yintercept = .5, lty = 2) +  
+  theme_classic() +   
+  ggthemes::scale_color_solarized() +   
+  theme(legend.position = "bottom")
 
 ```
