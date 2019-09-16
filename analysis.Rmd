@@ -73,7 +73,7 @@ ggplot(ms,
   geom_line(aes(group = trial_type)) + 
   ylim(0,1) + 
   ylab("Proportion correct") + 
-  xlab("Trial type") + 
+  xlab("Trial number") + 
   geom_hline(yintercept = .5, lty = 2) +
   theme_classic() + 
   ggthemes::scale_color_solarized() + 
@@ -98,7 +98,7 @@ ggplot(ms,
   facet_wrap(~FirstBlock) + 
   ylim(0,1) +   
   ylab("Proportion correct") +   
-  xlab("Trial type") +   
+  xlab("Trial number") +   
   geom_hline(yintercept = .5, lty = 2) +  
   theme_classic() +   
   ggthemes::scale_color_solarized() +   

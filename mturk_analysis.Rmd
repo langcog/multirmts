@@ -1,0 +1,135 @@
+---
+title: "mturk_analysis"
+author: "Alex"
+date: "9/15/2019"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+Preliminaries for analysis.
+
+```{r, echo=FALSE}
+library(tidyverse)
+library(here)
+library(ggthemes)
+library(tidyboot)
+
+```
+
+Now load data. 
+
+```{r}
+d_raw <- read_csv(here("data/mturk_anonymized.csv"))
+```
+Clean up unnecessary fields. 
+
+```{r}
+# look at trial_type="RMTStrain" & trial_index 2 (block 1) and 11 (block 2) to check if block is same or diff
+d_raw$type = NA
+d_raw$FirstBlock = NA
+for(s in unique(d_raw$subject)) {
+  bl1_ind = which(d_raw$subject==s & d_raw$trial_index==2)
+  bl2_ind = which(d_raw$subject==s & d_raw$trial_index==11)
+  bl1_type = ifelse((d_raw[bl1_ind,]$left_object==d_raw[bl1_ind,]$right_object) & (d_raw[bl1_ind,]$activate=="true"), "same", "different")
+  bl2_type = ifelse((d_raw[bl2_ind,]$left_object==d_raw[bl2_ind,]$right_object) & (d_raw[bl2_ind,]$activate=="true"), "same", "different")
+  bl1_test_ind = with(d_raw, subject==s & trial_type=="RMTStest" & trial_index < 10)
+  bl2_test_ind = with(d_raw, subject==s & trial_type=="RMTStest" & trial_index > 10)
+  d_raw[bl1_test_ind,]$type = bl1_type
+  d_raw[bl2_test_ind,]$type = bl2_type
+  d_raw[with(d_raw, subject==s & trial_type=="RMTStest"),]$FirstBlock = ifelse(bl1_type=="same","sameFirst","diffFirst")
+}
+
+d <- d_raw %>%
+  filter(trial_type=="RMTStest") %>%
+  select(-X1, -view_history, -rt, 
+         -trial_type, -internal_node_id,
+         -country_code, -stimulus, -key_press, 
+         -stimulus_type, -correct, -left_object, 
+         -right_object, -activate, -box, -startTime, 
+         -endTime, -RT, -samePair, -diffPair)
+```
+
+
+Renumber trial index to be sensible, code and score responses. 
+```{r}
+# Renumber trial index to 1-6 for each ppt. 
+d$trial_index=rep(1:3,2*length(unique(d$subject)))
+
+# Add resp column with participant's choice recorded. 
+d$resp=ifelse((d$choice=="leftTestButton" & d$sameSide=="L") | (d$choice=="rightTestButton" & d$sameSide=="R"),"same","different")
+
+# Score choice.
+d$correct=ifelse(d$resp==d$type,1,0)
+```
+
+
+
+By trial type.
+
+```{r}
+ms <- d %>%
+  group_by(type) %>%
+  tidyboot_mean(correct, na.rm=T)
+
+ggplot(ms, 
+       aes(x = type, y = mean, col = type)) + 
+  geom_pointrange(aes(ymin = ci_lower, ymax = ci_upper)) + 
+  ylim(0,1) + 
+  ylab("Proportion correct") + 
+  xlab("Trial type") + 
+  geom_hline(yintercept = .5, lty = 2)  +
+  theme_classic() + 
+  ggthemes::scale_color_solarized() + 
+  theme(legend.position = "bottom")
+```
+
+
+
+
+By trial type and trial number.
+
+```{r}
+ms <- d %>%
+  group_by(type, trial_index) %>%
+  tidyboot_mean(correct, na.rm=T)
+
+ggplot(ms, 
+       aes(x = trial_index, y = mean, col = type)) + 
+  geom_pointrange(aes(ymin = ci_lower, ymax = ci_upper), 
+                  position = position_dodge(width = .1)) + 
+  geom_line(aes(group = type)) + 
+  ylim(0,1) + 
+  ylab("Proportion correct") + 
+  xlab("Trial number") + 
+  geom_hline(yintercept = .5, lty = 2) +
+  theme_classic() + 
+  ggthemes::scale_color_solarized() + 
+  theme(legend.position = "bottom") 
+
+```
+
+
+Trial by block.
+
+```{r}
+ms <- d %>%  
+  group_by(type, FirstBlock, trial_index) %>%  
+  tidyboot_mean(correct, na.rm=T)
+
+ggplot(ms,        
+  aes(x = trial_index, y = mean, col = type)) +   
+  geom_pointrange(aes(ymin = ci_lower, ymax = ci_upper), position = position_dodge(width = .1)) +   
+  geom_line(aes(group = type)) +   
+  facet_wrap(~FirstBlock) + 
+  ylim(0,1) +   
+  ylab("Proportion correct") +   
+  xlab("Trial number") +   
+  geom_hline(yintercept = .5, lty = 2) +  
+  theme_classic() +   
+  ggthemes::scale_color_solarized() +   
+  theme(legend.position = "bottom")
+
+```
+
+
